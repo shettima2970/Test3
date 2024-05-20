@@ -17,7 +17,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-          add-path: src
+
+      - name: Add src directory to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:/home/runner/work/Test3/Test3/src" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: |
