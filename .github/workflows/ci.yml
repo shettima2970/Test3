@@ -17,9 +17,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
-      - name: Add src directory to Python path
-        run: echo "::add-path::src"
+          add-path: src
 
       - name: Install dependencies
         run: |
